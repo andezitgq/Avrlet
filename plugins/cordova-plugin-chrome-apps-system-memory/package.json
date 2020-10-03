@@ -1,0 +1,62 @@
+{
+  "_from": "cordova-plugin-chrome-apps-system-memory",
+  "_id": "cordova-plugin-chrome-apps-system-memory@1.1.1",
+  "_inBundle": false,
+  "_integrity": "sha1-CftdfPvPhDVTTbwC1nWwt4TXKIU=",
+  "_location": "/cordova-plugin-chrome-apps-system-memory",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-chrome-apps-system-memory",
+    "name": "cordova-plugin-chrome-apps-system-memory",
+    "escapedName": "cordova-plugin-chrome-apps-system-memory",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-chrome-apps-system-memory/-/cordova-plugin-chrome-apps-system-memory-1.1.1.tgz",
+  "_shasum": "09fb5d7cfbcf8435534dbc02d675b0b784d72885",
+  "_spec": "cordova-plugin-chrome-apps-system-memory",
+  "_where": "/home/freelogger/Документы/Phonegap/Avrlet",
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/MobileChromeApps/cordova-plugin-chrome-apps-system-memory/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-chrome-apps-system-memory",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "deprecated": false,
+  "description": "This plugin provides the ability to get physical memory information.",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "homepage": "https://github.com/MobileChromeApps/cordova-plugin-chrome-apps-system-memory",
+  "keywords": [
+    "chrome",
+    "system",
+    "memory",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "license": "BSD",
+  "name": "cordova-plugin-chrome-apps-system-memory",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MobileChromeApps/cordova-plugin-chrome-apps-system-memory.git"
+  },
+  "version": "1.1.1"
+}

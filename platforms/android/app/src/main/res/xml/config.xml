@@ -35,6 +35,12 @@
     <feature name="Vibration">
         <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
     </feature>
+    <feature name="ChromeSystemCpu">
+        <param name="android-package" value="org.chromium.ChromeSystemCpu" />
+    </feature>
+    <feature name="ChromeSystemMemory">
+        <param name="android-package" value="org.chromium.ChromeSystemMemory" />
+    </feature>
     <name>Avrlet</name>
     <description>
         Avrlet is mobile app for LED armlet

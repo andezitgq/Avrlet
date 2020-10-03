@@ -404,6 +404,22 @@ module.exports = [
             "navigator.notification",
             "navigator"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-chrome-apps-system-cpu/system.cpu.js",
+        "id": "cordova-plugin-chrome-apps-system-cpu.system.cpu",
+        "pluginId": "cordova-plugin-chrome-apps-system-cpu",
+        "clobbers": [
+            "chrome.system.cpu"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-chrome-apps-system-memory/system.memory.js",
+        "id": "cordova-plugin-chrome-apps-system-memory.system.memory",
+        "pluginId": "cordova-plugin-chrome-apps-system-memory",
+        "clobbers": [
+            "chrome.system.memory"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -420,7 +436,9 @@ module.exports.metadata =
     "cordova-plugin-globalization": "1.0.9",
     "cordova-plugin-inappbrowser": "1.7.2",
     "cordova-plugin-network-information": "1.3.4",
-    "cordova-plugin-vibration": "2.1.6"
+    "cordova-plugin-vibration": "2.1.6",
+    "cordova-plugin-chrome-apps-system-cpu": "1.1.1",
+    "cordova-plugin-chrome-apps-system-memory": "1.1.1"
 }
 // BOTTOM OF METADATA
 });

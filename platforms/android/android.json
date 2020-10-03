@@ -56,6 +56,16 @@
               "xml": "<feature name=\"Vibration\"><param name=\"android-package\" value=\"org.apache.cordova.vibration.Vibration\" /></feature>",
               "count": 1
             }
+          ],
+          "/widget": [
+            {
+              "xml": "<feature name=\"ChromeSystemCpu\"><param name=\"android-package\" value=\"org.chromium.ChromeSystemCpu\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"ChromeSystemMemory\"><param name=\"android-package\" value=\"org.chromium.ChromeSystemMemory\" /></feature>",
+              "count": 1
+            }
           ]
         }
       },
@@ -143,6 +153,12 @@
       "PACKAGE_NAME": "com.andezit.avrlet"
     },
     "cordova-plugin-vibration": {
+      "PACKAGE_NAME": "com.andezit.avrlet"
+    },
+    "cordova-plugin-chrome-apps-system-cpu": {
+      "PACKAGE_NAME": "com.andezit.avrlet"
+    },
+    "cordova-plugin-chrome-apps-system-memory": {
       "PACKAGE_NAME": "com.andezit.avrlet"
     }
   },
@@ -517,6 +533,22 @@
         "navigator.notification",
         "navigator"
       ]
+    },
+    {
+      "id": "cordova-plugin-chrome-apps-system-cpu.system.cpu",
+      "file": "plugins/cordova-plugin-chrome-apps-system-cpu/system.cpu.js",
+      "pluginId": "cordova-plugin-chrome-apps-system-cpu",
+      "clobbers": [
+        "chrome.system.cpu"
+      ]
+    },
+    {
+      "id": "cordova-plugin-chrome-apps-system-memory.system.memory",
+      "file": "plugins/cordova-plugin-chrome-apps-system-memory/system.memory.js",
+      "pluginId": "cordova-plugin-chrome-apps-system-memory",
+      "clobbers": [
+        "chrome.system.memory"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -530,6 +562,8 @@
     "cordova-plugin-inappbrowser": "1.7.2",
     "cordova-plugin-media-capture": "1.4.3",
     "cordova-plugin-network-information": "1.3.4",
-    "cordova-plugin-vibration": "2.1.6"
+    "cordova-plugin-vibration": "2.1.6",
+    "cordova-plugin-chrome-apps-system-cpu": "1.1.1",
+    "cordova-plugin-chrome-apps-system-memory": "1.1.1"
   }
 }

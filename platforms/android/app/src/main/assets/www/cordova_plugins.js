@@ -369,6 +369,22 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
         "navigator.notification",
         "navigator"
       ]
+    },
+    {
+      "id": "cordova-plugin-chrome-apps-system-cpu.system.cpu",
+      "file": "plugins/cordova-plugin-chrome-apps-system-cpu/system.cpu.js",
+      "pluginId": "cordova-plugin-chrome-apps-system-cpu",
+      "clobbers": [
+        "chrome.system.cpu"
+      ]
+    },
+    {
+      "id": "cordova-plugin-chrome-apps-system-memory.system.memory",
+      "file": "plugins/cordova-plugin-chrome-apps-system-memory/system.memory.js",
+      "pluginId": "cordova-plugin-chrome-apps-system-memory",
+      "clobbers": [
+        "chrome.system.memory"
+      ]
     }
   ];
   module.exports.metadata = {
@@ -382,6 +398,8 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-inappbrowser": "1.7.2",
     "cordova-plugin-media-capture": "1.4.3",
     "cordova-plugin-network-information": "1.3.4",
-    "cordova-plugin-vibration": "2.1.6"
+    "cordova-plugin-vibration": "2.1.6",
+    "cordova-plugin-chrome-apps-system-cpu": "1.1.1",
+    "cordova-plugin-chrome-apps-system-memory": "1.1.1"
   };
 });

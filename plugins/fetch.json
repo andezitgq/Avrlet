@@ -94,5 +94,21 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "cordova-plugin-chrome-apps-system-cpu": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-chrome-apps-system-cpu"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-chrome-apps-system-memory": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-chrome-apps-system-memory"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }

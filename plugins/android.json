@@ -36,6 +36,12 @@
     },
     "cordova-plugin-vibration": {
       "PACKAGE_NAME": "com.andezit.avrlet"
+    },
+    "cordova-plugin-chrome-apps-system-cpu": {
+      "PACKAGE_NAME": "com.andezit.avrlet"
+    },
+    "cordova-plugin-chrome-apps-system-memory": {
+      "PACKAGE_NAME": "com.andezit.avrlet"
     }
   },
   "dependent_plugins": {
