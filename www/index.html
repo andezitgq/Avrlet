@@ -40,10 +40,10 @@
 
         if( typeof navigator.getBattery != 'undefined' ){
             navigator.getBattery().then(function(battery) {
-                alert('Battery Level: ' + battery.level);
+                document.getElementById("battery").setAttribute("value", battery.level);
             });
         } else {
-            alert('Plugin missing');
+            alert('Battery plugin is missing!');
         }
 
     </script>
