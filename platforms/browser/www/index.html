@@ -26,10 +26,10 @@
         </div>
         <div class="system-info">
             <center><h2>System info</h2></center>
-            <label>Battery: <progress max="100" value="24"></progress></label>
-            <label>CPU: <progress max="100" value="76"></progress></label>
-            <label>GPU: <progress max="100" value="52"></progress></label>
-            <label>RAM: <progress max="100" value="35"></progress></label>
+            <label>Battery: <progress id=battery max="100" value="100"></progress></label>
+            <label>CPU: <progress id=cpu max="100" value="100"></progress></label>
+            <label>GPU: <progress id=gpu max="100" value="100"></progress></label>
+            <label>RAM: <progress id=ram max="100" value="100"></progress></label>
             <div class=btn-border><button class="connect" id="disconnect">Disconnect</button></div>
         </div>
     </div>
@@ -37,6 +37,13 @@
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
         app.initialize();
+
+        window.addEventListener("batterystatus", onBatteryStatus, false);
+
+        function onBatteryStatus(status) {
+            console.log("Level: " + status.level + " isPlugged: " + status.isPlugged);
+            document.getElementById("battery").setAttribute("value", status.level);
+        }
     </script>
 </body>
 
