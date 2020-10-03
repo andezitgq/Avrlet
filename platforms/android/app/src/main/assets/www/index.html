@@ -14,15 +14,23 @@
 <body>
     <h1 class=logo><img src="res/icon/android/drawable-xxhdpi-icon.png" width=50><p>Avrlet</p></h1>
     <div class=app>
-        <div class=default-page>
+        <div class=default-page style="display:none">
             <p class="connect-label">
                 <ol>
-                    <li>Accept all permission for the app</li>
+                    <li>Accept all permissions for the app</li>
                     <li>Create a hotspot on your device</li>
                     <li>Connect to hotspot with your Avrlet</li>
                 </ol>
             </p>
-            <div class=btn-border><button class="connect">Connect</button></div>
+            <div class=btn-border><button class="connect" id="connect">Connect</button></div>
+        </div>
+        <div class="system-info">
+            <center><h2>System info</h2></center>
+            <label>Battery: <progress max="100" value="24"></progress></label>
+            <label>CPU: <progress max="100" value="76"></progress></label>
+            <label>GPU: <progress max="100" value="52"></progress></label>
+            <label>RAM: <progress max="100" value="35"></progress></label>
+            <div class=btn-border><button class="connect" id="disconnect">Disconnect</button></div>
         </div>
     </div>
     <script type="text/javascript" src="cordova.js"></script>

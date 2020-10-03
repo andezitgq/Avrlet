@@ -7,6 +7,13 @@
     font-weight: lighter;
 }
 
+*:focus {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
 body {
     background: #393939;
     color: white;
@@ -53,3 +60,14 @@ body {
 }
 
 .connect:hover {background: linear-gradient(to right, red, purple);}
+
+.system-info {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.system-info label {
+    margin: 10px;
+}
