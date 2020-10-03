@@ -35,7 +35,6 @@
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="CPUInfoPlugin.js"></script>
     <script type="text/javascript">
         app.initialize();
 
@@ -46,10 +45,6 @@
         } else {
             //alert('Battery plugin is missing!');
         }
-
-        cordova.CPUInfo.getMacAddress(function (address) {
-            alert(address);
-        });
 
         chrome.system.cpu.getInfo().then(function(cinfo){       
             alert(JSON.stringify(cinfo));   
