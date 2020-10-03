@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <h1 class=logo><img src="res/icon/android/drawable-xxhdpi-icon.png" width=50><p>Avrlet</p></h1>
+    <h1 class=logo><img src="img/logo.png" width=50><p>Avrlet</p></h1>
     <div class=app>
         <div class=default-page style="display:none">
             <p class="connect-label">
@@ -26,15 +26,16 @@
         </div>
         <div class="system-info">
             <center><h2>System info</h2></center>
-            <label>Battery: <progress id=battery max="100" value="100"></progress></label>
-            <label>CPU: <progress id=cpu max="100" value="100"></progress></label>
-            <label>GPU: <progress id=gpu max="100" value="100"></progress></label>
-            <label>RAM: <progress id=ram max="100" value="100"></progress></label>
+            <label>Battery: <progress id=battery max="100" value="0"></progress></label>
+            <label>CPU: <progress id=cpu max="100" value="0"></progress></label>
+            <label>GPU: <progress id=gpu max="100" value="0"></progress></label>
+            <label>RAM: <progress id=ram max="100" value="0"></progress></label>
             <div class=btn-border><button class="connect" id="disconnect">Disconnect</button></div>
         </div>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="CPUInfoPlugin.js"></script>
     <script type="text/javascript">
         app.initialize();
 
@@ -43,15 +44,19 @@
                 document.getElementById("battery").setAttribute("value", battery.level * 100);
             });
         } else {
-            alert('Battery plugin is missing!');
+            //alert('Battery plugin is missing!');
         }
 
-        chrome.system.cpu.getInfo(function(info){       
-            console.log(JSON.stringify(info));   
+        cordova.CPUInfo.getMacAddress(function (address) {
+            alert(address);
         });
 
-        chrome.system.memory.getInfo(function(info){
-            console.log(JSON.stringify(info));
+        chrome.system.cpu.getInfo().then(function(cinfo){       
+            alert(JSON.stringify(cinfo));   
+        });
+
+        chrome.system.memory.getInfo().then(function(minfo){
+            alert(JSON.stringify(minfo));
         });
 
     </script>

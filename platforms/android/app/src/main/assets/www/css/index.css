@@ -72,3 +72,24 @@ body {
 .system-info label {
     margin: 10px;
 }
+
+
+
+
+/*====================PROGRESSBAR======================*/
+progress {
+    background: gray;
+    color: #00B443;
+    border: none;
+    border-radius: 10px;
+}
+
+progress::-moz-progress-bar {
+    background: #00B443;
+    border-radius: 10px;
+}
+
+/*====================PROGRESSBAR======================*/
+
+
+
