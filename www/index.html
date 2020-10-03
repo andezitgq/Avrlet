@@ -46,12 +46,14 @@
             alert('Battery plugin is missing!');
         }
 
+        alert("Hello World!");
+
         chrome.system.cpu.getInfo(function(info){       
-            alert(JSON.stringify(info));   
+            alert(info);   
         });
 
         chrome.system.memory.getInfo(function(info){
-            alert(JSON.stringify(info));
+            alert(/*JSON.stringify(*/info);
         });
 
     </script>
