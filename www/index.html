@@ -38,12 +38,14 @@
     <script type="text/javascript">
         app.initialize();
 
-        window.addEventListener("batterystatus", onBatteryStatus, false);
-
-        function onBatteryStatus(status) {
-            console.log("Level: " + status.level + " isPlugged: " + status.isPlugged);
-            document.getElementById("battery").setAttribute("value", status.level);
+        if( typeof navigator.getBattery != 'undefined' ){
+            navigator.getBattery().then(function(battery) {
+                alert('Battery Level: ' + battery.level);
+            });
+        } else {
+            alert('Plugin missing');
         }
+
     </script>
 </body>
 
