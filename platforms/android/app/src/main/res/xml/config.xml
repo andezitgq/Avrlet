@@ -35,9 +35,9 @@
     <feature name="Vibration">
         <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
     </feature>
-    <name>avrlet</name>
+    <name>Avrlet</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Avrlet is mobile app for LED armlet
     </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team

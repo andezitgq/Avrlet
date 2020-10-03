@@ -1,10 +1,10 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "avrlet",
-  "short_name": "avrlet",
+  "name": "Avrlet",
+  "short_name": "Avrlet",
   "version": "com.andezit.avrlet",
-  "description": "Hello World sample application that responds to the deviceready event.",
+  "description": "Avrlet is mobile app for LED armlet",
   "author": "PhoneGap Team",
   "icons": [],
   "start_url": "index.html"
