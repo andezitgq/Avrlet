@@ -4,8 +4,8 @@
     <description>
         Avrlet is mobile app for LED armlet
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="support@gamequarry.info" href="andezit.gamequarry.info">
+        Andezit
     </author>
     <content src="index.html" />
     <access origin="*" />

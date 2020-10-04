@@ -5,7 +5,7 @@
   "short_name": "Avrlet",
   "version": "com.andezit.avrlet",
   "description": "Avrlet is mobile app for LED armlet",
-  "author": "PhoneGap Team",
+  "author": "Andezit",
   "icons": [],
   "start_url": "index.html"
 }

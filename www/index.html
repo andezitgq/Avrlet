@@ -24,7 +24,7 @@
             </p>
             <div class=btn-border><button class="connect" id="connect">Connect</button></div>
         </div>
-        <div class="system-info">
+        <div class="system-info" style="display:none">
             <center><h2>System info</h2></center>
             <label>Battery: <progress id=battery max="100" value="0"></progress></label>
             <label>CPU: <progress id=cpu max="100" value="0"></progress></label>
@@ -32,6 +32,7 @@
             <label>RAM: <progress id=ram max="100" value="0"></progress></label>
             <div class=btn-border><button class="connect" id="disconnect">Disconnect</button></div>
         </div>
+        <div id=deviceProperties></div>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
@@ -43,24 +44,31 @@
                 document.getElementById("battery").setAttribute("value", battery.level * 100);
             });
         } else {
-            alert('Battery plugin is missing!');
+            //alert('Battery plugin is missing!');
         }
 
-        if( typeof chrome.system.cpu.getInfo != 'undefined' ){
-            chrome.system.cpu.getInfo().then(function(cinfo){       
-                alert(JSON.stringify(cinfo));   
-            });
-        } else {
-            alert('CPU plugin is missing!');
+        alert(device.model);
+
+        chrome.system.cpu.getInfo().then(function(cinfo){       
+            alert(JSON.stringify(cinfo));   
+        });
+
+        chrome.system.memory.getInfo().then(function(minfo){
+            alert(JSON.stringify(minfo));
+        });
+
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        function onDeviceReady() {
+            var element = document.getElementById('deviceProperties');
+            element.innerHTML = 'Device Name: '     + device.name     + '<br />' +
+                                'Device Cordova: '  + device.cordova  + '<br />' +
+                                'Device Platform: ' + device.platform + '<br />' +
+                                'Device UUID: '     + device.uuid     + '<br />' +
+                                'Device Model: '    + device.model    + '<br />' +
+                                'Device Version: '  + device.version  + '<br />';
         }
 
-        if( typeof chrome.system.memory.getInfo != 'undefined' ){
-            chrome.system.memory.getInfo().then(function(minfo){
-                alert(JSON.stringify(minfo));
-            });
-        } else {
-            alert('MEMORY plugin is missing!');
-        }
 
     </script>
 </body>
