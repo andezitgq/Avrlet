@@ -26,7 +26,7 @@
             </p>
             <div class=btn-border><button class="connect" id="connect">Connect</button></div>
         </div>
-        <div class="system-info" style="display:none">
+        <div class="system-info">
             <center><h2>System info</h2></center>
             <label>Battery: <progress id=battery max="100" value="0"></progress></label>
             <label>CPU: <progress id=cpu max="100" value="0"></progress></label>
@@ -34,7 +34,6 @@
             <label>RAM: <progress id=ram max="100" value="0"></progress></label>
             <div class=btn-border><button class="connect" id="disconnect">Disconnect</button></div>
         </div>
-        <div id=deviceProperties>123</div>
     </div>
     <script type="text/javascript">
         app.initialize();
@@ -51,9 +50,9 @@
             alert(JSON.stringify(cinfo));   
         });
 
-        /*chrome.system.memory.getInfo(function(minfo){
+        chrome.system.memory.getInfo(function(minfo){
             alert(JSON.stringify(minfo));
-        });*/
+        });
     </script>
 </body>
 
