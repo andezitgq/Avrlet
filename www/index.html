@@ -43,16 +43,24 @@
                 document.getElementById("battery").setAttribute("value", battery.level * 100);
             });
         } else {
-            //alert('Battery plugin is missing!');
+            alert('Battery plugin is missing!');
         }
 
-        chrome.system.cpu.getInfo().then(function(cinfo){       
-            alert(JSON.stringify(cinfo));   
-        });
+        if( typeof chrome.system.cpu.getInfo != 'undefined' ){
+            chrome.system.cpu.getInfo().then(function(cinfo){       
+                alert(JSON.stringify(cinfo));   
+            });
+        } else {
+            alert('CPU plugin is missing!');
+        }
 
-        chrome.system.memory.getInfo().then(function(minfo){
-            alert(JSON.stringify(minfo));
-        });
+        if( typeof chrome.system.memory.getInfo != 'undefined' ){
+            chrome.system.memory.getInfo().then(function(minfo){
+                alert(JSON.stringify(minfo));
+            });
+        } else {
+            alert('MEMORY plugin is missing!');
+        }
 
     </script>
 </body>
