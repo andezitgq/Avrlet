@@ -9,6 +9,8 @@
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <title>Avrlet</title>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
 </head>
 
 <body>
@@ -34,8 +36,6 @@
         </div>
         <div id=deviceProperties>123</div>
     </div>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
         app.initialize();
 
@@ -44,25 +44,16 @@
                 document.getElementById("battery").setAttribute("value", battery.level * 100);
             });
         } else {
-            //alert('Battery plugin is missing!');
+            alert('Battery plugin is missing!');
         }
 
-        /*chrome.system.cpu.getInfo().then(function(cinfo){       
+        chrome.system.cpu.getInfo().then(function(cinfo){       
             alert(JSON.stringify(cinfo));   
         });
 
         chrome.system.memory.getInfo().then(function(minfo){
             alert(JSON.stringify(minfo));
-        });*/
-            var element = document.getElementById('deviceProperties');
-            element.innerHTML = 'Device Name: '     + device.name     + '<br />' +
-                                'Device Cordova: '  + device.cordova  + '<br />' +
-                                'Device Platform: ' + device.platform + '<br />' +
-                                'Device UUID: '     + device.uuid     + '<br />' +
-                                'Device Model: '    + device.model    + '<br />' +
-                                'Device Version: '  + device.version  + '<br />';
-
-
+        });
     </script>
 </body>
 
