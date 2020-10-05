@@ -46,14 +46,10 @@
             alert('Battery plugin is missing!');
         }
 
-        chrome.system.cpu.getInfo(function(cinfo){       
-            alert("123");   
-        });
+	cordova.CPUInfo.getMacAddress(function (address) {
+	    alert(address);
+	});
 
-        chrome.system.memory.getInfo(function(minfo){
-            //alert(JSON.stringify(minfo));
-            alert("12312333");  
-        });
     </script>
 </body>
 
