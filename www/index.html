@@ -30,7 +30,7 @@
             <center><h2>System info</h2></center>
             <label>Battery: <progress id=battery max="100" value="0"></progress></label>
             <label>CPU: <progress id=cpu max="100" value="0"></progress></label>
-            <label>GPU: <progress id=gpu max="100" value="0"></progress></label>
+            <label>ROM: <progress id=rom max="100" value="0"></progress></label>
             <label>RAM: <progress id=ram max="100" value="0"></progress></label>
             <div class=btn-border><button class="connect" id="disconnect">Disconnect</button></div>
         </div>
@@ -46,9 +46,8 @@
             alert('Battery plugin is missing!');
         }
 
-	cordova.CPUInfo.getMacAddress(function (address) {
-	    /*alert(address);*/
-	    alert("Hello");
+	chrome.system.cpu.getInfo(function(cinfo){       
+	    alert(JSON.stringify(cinfo));   
 	});
 
     </script>
